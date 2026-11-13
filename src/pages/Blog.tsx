@@ -3,19 +3,19 @@ import { useState } from "react";
 import "../portfolio.css";
 
 // She Code Africa Summit photos
-import summitImg from "../assets/summitimg.png";
-import summitImg1 from "../assets/summitimg1.png";
-import summitImg2 from "../assets/summitimg2.png";
-import summitImg3 from "../assets/summitimg3.png";
-import summitImg4 from "../assets/summitimg4.png";
-import summitImg5 from "../assets/summitimg5.png";
-import summitImg6 from "../assets/summitimg6.png";
-import summitImg7 from "../assets/summitimg7.png";
-import summitImg8 from "../assets/summitimg8.png";
-import summitImg9 from "../assets/summitimg9.png";
-import summitImg10 from "../assets/summitimg10.png";
-import summitImg11 from "../assets/summitimg11.png";
-import summitImg12 from "../assets/summitimg12.png";
+import summitImg from "../assets/summitImg.png";
+import summitImg1 from "../assets/summitImg1.png";
+import summitImg2 from "../assets/summitImg2.png";
+import summitImg3 from "../assets/summitImg3.png";
+import summitImg4 from "../assets/summitImg4.png";
+import summitImg5 from "../assets/summitImg5.png";
+import summitImg6 from "../assets/summitImg6.png";
+import summitImg7 from "../assets/summitImg7.png";
+import summitImg8 from "../assets/summitImg8.png";
+import summitImg9 from "../assets/summitImg9.png";
+import summitImg10 from "../assets/summitImg10.png";
+import summitImg11 from "../assets/summitImg11.png";
+import summitImg12 from "../assets/summitImg12.png";
 
 // Sewing photos
 import sewingImg1 from "../assets/sewingImg1.png";
