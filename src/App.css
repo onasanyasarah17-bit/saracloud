@@ -1,0 +1,573 @@
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap");
+
+:root {
+  --chocolate: #3A1605;
+  --rich-brown: #6B2D0A;
+  --gold: #D99A16;
+  --warm-gold: #F4C34F;
+  --cream: #FFFDF9;
+  --muted-cream: rgba(255, 253, 249, 0.66);
+  --hairline: rgba(244, 195, 79, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--chocolate);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: "DM Sans", sans-serif;
+  background: var(--chocolate);
+  color: var(--cream);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+.welcome-page {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  min-height: 100svh;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 30px 6.5% 26px;
+  background:
+    radial-gradient(
+      ellipse at 50% 44%,
+      rgba(160, 83, 19, 0.22) 0%,
+      rgba(107, 45, 10, 0.12) 28%,
+      transparent 65%
+    ),
+    linear-gradient(
+      135deg,
+      #241005 0%,
+      var(--chocolate) 48%,
+      #2c1104 100%
+    );
+}
+
+/* Fine inset frame */
+.welcome-page::before {
+  position: absolute;
+  z-index: -1;
+  inset: 15px;
+  border: 1px solid rgba(244, 195, 79, 0.2);
+  content: "";
+  pointer-events: none;
+}
+
+/* Large decorative gold halo */
+.welcome-page::after {
+  position: absolute;
+  z-index: -1;
+  top: 16%;
+  left: 50%;
+  width: min(78vw, 850px);
+  aspect-ratio: 1.45;
+  transform: translateX(-50%);
+  border: 1px solid rgba(244, 195, 79, 0.08);
+  border-radius: 50%;
+  box-shadow:
+    0 0 90px rgba(217, 154, 22, 0.055),
+    inset 0 0 100px rgba(217, 154, 22, 0.035);
+  content: "";
+  pointer-events: none;
+}
+
+.ambient-glow {
+  position: absolute;
+  z-index: -1;
+  top: 23%;
+  left: 50%;
+  width: 360px;
+  height: 360px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: rgba(244, 195, 79, 0.08);
+  filter: blur(100px);
+  pointer-events: none;
+}
+
+.welcome-header,
+.welcome-footer {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand-mark {
+  color: var(--warm-gold);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: -3px;
+  text-decoration: none;
+  transition: text-shadow 250ms ease;
+}
+
+.brand-mark span {
+  color: var(--cream);
+}
+
+.brand-mark:hover {
+  text-shadow: 0 0 22px rgba(244, 195, 79, 0.4);
+}
+
+.header-label,
+.welcome-footer p,
+.scroll-link {
+  font-size: 0.64rem;
+  letter-spacing: 0.19em;
+  line-height: 1.8;
+}
+
+.header-label {
+  color: var(--muted-cream);
+}
+
+.welcome-content {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 65px auto;
+  text-align: center;
+  animation: entrance 1s ease both;
+}
+
+/* Small editorial heading */
+.eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 0 0 28px;
+  color: var(--warm-gold);
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  line-height: 1.8;
+}
+
+.eyebrow-line {
+  width: 34px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--warm-gold)
+  );
+}
+
+.eyebrow-line:last-child {
+  transform: rotate(180deg);
+}
+
+.welcome-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-weight: 400;
+}
+
+.welcome-intro {
+  color: var(--cream);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.5rem, 3.2vw, 2.5rem);
+  font-weight: 400;
+  letter-spacing: 0.22em;
+}
+
+/* Metallic gold wordmark */
+.gold-wordmark {
+  display: inline-block;
+  max-width: 100%;
+  color: var(--warm-gold);
+  background: linear-gradient(
+    105deg,
+    #B8790A 0%,
+    #E4AC2D 16%,
+    #FFF0B6 29%,
+    #D99A16 39%,
+    #F9D875 51%,
+    #B8790A 65%,
+    #F4C34F 79%,
+    #FFF0B6 88%,
+    #D99A16 100%
+  );
+  background-size: 250% 100%;
+  background-position: 100% 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(3rem, 9.2vw, 7.8rem);
+  font-weight: 500;
+  letter-spacing: 0.035em;
+  line-height: 1.22;
+  filter: drop-shadow(0 5px 25px rgba(217, 154, 22, 0.13));
+  animation: metallic-shimmer 7s ease-in-out infinite;
+}
+
+/* Decorative gold separator */
+.gold-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  width: 170px;
+  margin: 27px auto 25px;
+  color: var(--warm-gold);
+}
+
+.gold-divider > span:not(.divider-diamond) {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--gold)
+  );
+}
+
+.gold-divider > span:last-child {
+  transform: rotate(180deg);
+}
+
+.divider-diamond {
+  font-size: 0.7rem;
+  text-shadow: 0 0 12px rgba(244, 195, 79, 0.5);
+}
+
+.welcome-tagline {
+  margin: 0 0 15px;
+  color: var(--cream);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.35rem, 2.7vw, 2rem);
+  font-weight: 400;
+  letter-spacing: 0.035em;
+}
+
+.welcome-description {
+  max-width: 440px;
+  margin: 0 auto;
+  color: var(--muted-cream);
+  font-size: 0.96rem;
+  line-height: 1.95;
+}
+
+/* Refined entrance button */
+.enter-button {
+  position: relative;
+  display: inline-flex;
+  min-width: 245px;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  overflow: hidden;
+  margin-top: 35px;
+  padding: 17px 24px;
+  border: 1px solid rgba(244, 195, 79, 0.72);
+  color: var(--warm-gold);
+  background: rgba(58, 22, 5, 0.25);
+  font-size: 0.69rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-decoration: none;
+  transition:
+    color 300ms ease,
+    border-color 300ms ease,
+    background 300ms ease,
+    box-shadow 300ms ease,
+    transform 300ms ease;
+}
+
+.enter-button::before {
+  position: absolute;
+  inset: 0;
+  transform: translateX(-130%);
+  background: linear-gradient(
+    110deg,
+    transparent 20%,
+    rgba(255, 253, 249, 0.3) 50%,
+    transparent 80%
+  );
+  content: "";
+  pointer-events: none;
+}
+
+.enter-button:hover::before {
+  transform: translateX(130%);
+  transition: transform 700ms ease;
+}
+
+.enter-button:hover {
+  transform: translateY(-3px);
+  border-color: var(--warm-gold);
+  color: var(--chocolate);
+  background: var(--warm-gold);
+  box-shadow: 0 8px 35px rgba(217, 154, 22, 0.19);
+}
+
+.button-arrow {
+  font-size: 1.15rem;
+  transition: transform 250ms ease;
+}
+
+.enter-button:hover .button-arrow {
+  transform: translate(3px, -3px);
+}
+
+.welcome-note {
+  margin: 27px 0 0;
+  color: rgba(255, 253, 249, 0.43);
+  font-size: 0.57rem;
+  letter-spacing: 0.16em;
+  line-height: 1.8;
+}
+
+.welcome-footer {
+  color: rgba(255, 253, 249, 0.5);
+}
+
+.welcome-footer p {
+  margin: 0;
+}
+
+.scroll-link {
+  color: var(--muted-cream);
+  text-decoration: none;
+  transition: color 250ms ease;
+}
+
+.scroll-link:hover {
+  color: var(--warm-gold);
+}
+
+.scroll-link span {
+  display: inline-block;
+  margin-left: 8px;
+  color: var(--warm-gold);
+  font-size: 1rem;
+  transition: transform 250ms ease;
+}
+
+.scroll-link:hover span {
+  transform: translateY(3px);
+}
+
+/* Placeholder section below the welcome screen */
+.portfolio-placeholder {
+  position: relative;
+  display: flex;
+  min-height: 70vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 24px;
+  border-top: 1px solid var(--hairline);
+  background:
+    radial-gradient(
+      ellipse at 50% 0%,
+      rgba(107, 45, 10, 0.28),
+      transparent 65%
+    ),
+    #241005;
+  text-align: center;
+  scroll-margin-top: 20px;
+}
+
+.portfolio-placeholder .eyebrow {
+  margin-bottom: 24px;
+}
+
+.portfolio-placeholder h2 {
+  max-width: 800px;
+  margin: 0 0 18px;
+  color: var(--cream);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2.2rem, 5.5vw, 4.5rem);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.portfolio-placeholder > p:not(.eyebrow) {
+  max-width: 460px;
+  color: var(--muted-cream);
+  font-size: 0.95rem;
+  line-height: 1.9;
+}
+
+.back-link {
+  margin-top: 25px;
+  color: var(--warm-gold);
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: letter-spacing 250ms ease;
+}
+
+.back-link:hover {
+  letter-spacing: 0.04em;
+}
+
+@keyframes metallic-shimmer {
+  0%, 65%, 100% {
+    background-position: 100% 50%;
+  }
+
+  35% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes entrance {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .welcome-page {
+    min-height: 100svh;
+    padding: 23px 7% 24px;
+  }
+
+  .welcome-page::before {
+    inset: 9px;
+  }
+
+  .welcome-page::after {
+    top: 23%;
+    width: 95vw;
+  }
+
+  .welcome-header,
+  .welcome-footer {
+    gap: 12px;
+  }
+
+  .brand-mark {
+    font-size: 1.9rem;
+  }
+
+  .header-label {
+    font-size: 0.52rem;
+    letter-spacing: 0.12em;
+  }
+
+  .welcome-content {
+    margin: 52px auto;
+  }
+
+  .eyebrow {
+    gap: 8px;
+    margin-bottom: 25px;
+    font-size: 0.54rem;
+    letter-spacing: 0.14em;
+  }
+
+  .eyebrow-line {
+    width: 17px;
+  }
+
+  .welcome-intro {
+    font-size: clamp(1.25rem, 6vw, 1.8rem);
+    letter-spacing: 0.16em;
+  }
+
+  .gold-wordmark {
+    font-size: clamp(2.45rem, 11vw, 4.1rem);
+    letter-spacing: 0.005em;
+  }
+
+  .gold-divider {
+    width: 135px;
+    margin: 25px auto 22px;
+  }
+
+  .welcome-tagline {
+    font-size: clamp(1.25rem, 5vw, 1.6rem);
+  }
+
+  .welcome-description {
+    max-width: 330px;
+    font-size: 0.88rem;
+    line-height: 1.85;
+  }
+
+  .enter-button {
+    min-width: 220px;
+    margin-top: 29px;
+    padding: 16px 19px;
+  }
+
+  .welcome-note {
+    max-width: 300px;
+    margin: 23px auto 0;
+    font-size: 0.5rem;
+    letter-spacing: 0.12em;
+  }
+
+  .welcome-footer {
+    align-items: flex-start;
+  }
+
+  .welcome-footer p,
+  .scroll-link {
+    max-width: 48%;
+    font-size: 0.48rem;
+    letter-spacing: 0.08em;
+  }
+
+  .portfolio-placeholder {
+    min-height: 60vh;
+    padding: 75px 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.page-placeholder {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  margin: 0;
+  background: #fffdf9;
+  color: #3a1605;
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(2rem, 5vw, 4rem);
+  text-align: center;
+}
