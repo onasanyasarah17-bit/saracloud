@@ -3,26 +3,26 @@ import { useState } from "react";
 import "../portfolio.css";
 
 // She Code Africa Summit photos
-import summitImg from "../assets/summitImg.png";
-import summitImg1 from "../assets/summitImg1.png";
-import summitImg2 from "../assets/summitImg2.png";
-import summitImg3 from "../assets/summitImg3.png";
-import summitImg4 from "../assets/summitImg4.png";
-import summitImg5 from "../assets/summitImg5.png";
-import summitImg6 from "../assets/summitImg6.png";
-import summitImg7 from "../assets/summitImg7.png";
-import summitImg8 from "../assets/summitImg8.png";
-import summitImg9 from "../assets/summitImg9.png";
-import summitImg10 from "../assets/summitImg10.png";
-import summitImg11 from "../assets/summitImg11.png";
-import summitImg12 from "../assets/summitImg12.png";
+import summit from "../assets/summit.png";
+import summit1 from "../assets/summit1.png";
+import summit2 from "../assets/summit2.png";
+import summit3 from "../assets/summit3.png";
+import summit4 from "../assets/summit4.png";
+import summit5 from "../assets/summit5.png";
+import summit6 from "../assets/summit6.png";
+import summit7 from "../assets/summit7.png";
+import summit8 from "../assets/summit8.png";
+import summit9 from "../assets/summit9.png";
+import summit10 from "../assets/summit10.png";
+import summit11 from "../assets/summit11.png";
+import summit12 from "../assets/summit12.png";
 
 // Sewing photos
-import sewingImg1 from "../assets/sewingImg1.png";
-import sewingImg2 from "../assets/sewingImg2.png";
-import sewingImg3 from "../assets/sewingImg3.png";
-import sewingImg4 from "../assets/sewingImg4.png";
-import sewingImg5 from "../assets/sewingImg5.png";
+import sewing1 from "../assets/sewing1.png";
+import sewing2 from "../assets/sewing2.png";
+import sewing3 from "../assets/sewing3.png";
+import sewing4 from "../assets/sewing4.png";
+import sewing5 from "../assets/sewing5.png";
 
 // Student Progressive Forum photos
 import impact from "../assets/impact.png";
@@ -236,23 +236,23 @@ function Blog() {
   // Sewing collection
   const sewingPieces: GalleryPhoto[] = [
     {
-      image: sewingImg1,
+      image: sewing1,
       title: "Convocation straight gown",
     },
     {
-      image: sewingImg2,
+      image: sewing2,
       title: "Putting smiles on adults' and children's faces through sewing",
     },
     {
-      image: sewingImg3,
+      image: sewing3,
       title: "A well-tailored pair of trousers",
     },
     {
-      image: sewingImg4,
+      image: sewing4,
       title: "Bridesmaid outfit",
     },
     {
-      image: sewingImg5,
+      image: sewing5,
       title: "Fitted Owanbe outfit",
     },
   ];
@@ -260,55 +260,55 @@ function Blog() {
   // She Code Africa Summit collection
   const summitPhotos: GalleryPhoto[] = [
     {
-      image: summitImg,
+      image: summit,
       title: "I made the pant suit I'm putting on",
     },
     {
-      image: summitImg1,
+      image: summit1,
       title: "Beautiful moment with my tech partner, Olamide Folorunsho",
     },
     {
-      image: summitImg2,
+      image: summit2,
       title: "The decoration complements my pant suit",
     },
     {
-      image: summitImg3,
+      image: summit3,
       title: "Beautiful moment with Oreoluwa Adetula",
     },
     {
-      image: summitImg4,
+      image: summit4,
       title: "Another beautiful moment",
     },
     {
-      image: summitImg5,
+      image: summit5,
       title: "Smile",
     },
     {
-      image: summitImg6,
+      image: summit6,
       title: "Feeling myself",
     },
     {
-      image: summitImg7,
+      image: summit7,
       title: "Nice shot",
     },
     {
-      image: summitImg8,
+      image: summit8,
       title: "Network moment with Apify",
     },
     {
-      image: summitImg9,
+      image: summit9,
       title: "YiiPee",
     },
     {
-      image: summitImg10,
+      image: summit10,
       title: "A special moment with my DevOps tutor, Mary Mbaoma",
     },
     {
-      image: summitImg11,
+      image: summit11,
       title: "I have grown wings",
     },
     {
-      image: summitImg12,
+      image: summit12,
       title: "A Summit to Remember",
     },
   ];
